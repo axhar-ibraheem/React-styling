@@ -1,10 +1,15 @@
-import React from 'react';
+import React from "react";
+import styled from "styled-components";
 
-import './Button.css';
+import "./Button.css";
 
-const Button = props => {
+const Button = (props) => {
   return (
-    <button type={props.type} className="button" onClick={props.onClick}>
+    <button
+      type={props.type}
+      className={`button ${props.check ? "noInput" : ""}`}
+      onClick={props.onClick}
+    >
       {props.children}
     </button>
   );
